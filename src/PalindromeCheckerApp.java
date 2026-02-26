@@ -1,8 +1,20 @@
-/*
-*uc 1 palindrome checker
-*                   */
+
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
-        System.out.println("welcome to palindrome manager system\nversion :1.0\n system initialized sucessfully ");
+        String word = "madam1";
+        boolean isPalindrome = true;
+        int n = word.length() - 1;
+        for (int i = 0; i < word.length() / 2; i++) {
+            if (word.charAt(i) != word.charAt(n - i)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+        if (isPalindrome) {
+            System.out.println(word + "is a palindrome");
+        } else {
+        }
+        System.out.println(word + "is not a palindrome");
+
     }
 }
